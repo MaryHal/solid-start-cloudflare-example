@@ -1,0 +1,16 @@
+name = "solid-start-cloudflare-example"
+compatibility_date = "2022-12-04"
+workers_dev = true
+
+main = "./dist/server.js"
+
+[site]
+bucket= "./dist/public"
+
+[[ d1_databases ]]
+binding = "__D1_BETA__db" # Miniflare needs the __D1_BETA__ prefix for local runs
+database_name = "solid-start-cloudflare-example-db"
+database_id = "" # Your database id here!
+
+[dev]
+port = 3000
